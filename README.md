@@ -72,13 +72,14 @@
   [ لیست خطاها](https://idpay.ir/web-service/v1.1/?javascript#d7b83cfb9c)
   
 	
-ورودی | نوع | اجباری 
---- | --- | --- 
-amount | بله | بله 
+اجباری | نوع | ورودی 
+--- | --- | ---  
+| بله| عدد |amount|
 | بله| رشته |order_id|
 | بله| رشته |callback|
 | خیر| رشته |name|
 | خیر| رشته |phone|
 | خیر| رشته |mail|
 | خیر| رشته |desc|
+
 </div>
