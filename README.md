@@ -85,7 +85,9 @@
 
  # تایید تراکنش
 
+	<p>
 	در صفحه کال بک می توانید  مرحله اعتبار سنجی تراکنش را با متد verify انجام دهید.
+	</p>
 	
 	```
 	const verifypay = await idpay.verify(id, order_id);
