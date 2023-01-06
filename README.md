@@ -24,7 +24,47 @@
   
   ```
       const  Eazyidpay = require("eazy-idpay");
-    const  idpay = new  Eazyidpay(*TOKEN*, true);
+    const  idpay = new  Eazyidpay(TOKEN, true);
   ```
-  *TOKEN* :   درگاه جهت احراز هویت API
+  TOKEN :   درگاه جهت احراز هویت API
+  
+  # ایجاد تراکنش
+  
+  <p>
+  برای ایجاد تراکنش از متد create استفاده کنید
+  </p>
+  ```
+      const createpay = await  idpay.create({
+	    amount:  100000,
+	    order_id:  2423,
+	    callback:  "http://localhost:3000/callback",
+	    name:  "فتاح رنجبر",
+	    phone:  "09339993377",
+	    mail:  "my@site.com",
+	    desc:  "توضیحات",
+    });
+  ```
+  در صورت درست بودن تمام ورودی های متد پاسخ زیر برای شما به صورت جسون به شما داده میشود
+
+  ```
+{
+  "id": "d2e353189823079e1e4181772cff5292",
+  "link": "https://idpay.ir/p/ws-sandbox/d2e353189823079e1e4181772cff5292"
+}
+```
+  
+   شما باید برای انجام مراحل پرداخت کاربر را به  پراپرتی link در پاسخ ایجاد تراکنش ریدایرکت کنید 
+
+در صورت بروز خطا در ایجاد تراکنش پاسخی مشابه زیر به صورت جسون دریافت می کنید
+
+  ```
+      {
+	  status: 406
+	  data:{  
+		"error_code": 32, 
+		"error_message": ".نباید خالی باشد `order_id` مقدار"
+    }}
+  ```
+  [ لیست خطاها](https://idpay.ir/web-service/v1.1/?javascript#d7b83cfb9c)
+  
 </div>
