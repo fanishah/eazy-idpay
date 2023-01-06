@@ -33,17 +33,21 @@
   <p>
   برای ایجاد تراکنش از متد create استفاده کنید
   </p>
+	
   ```
-      const createpay = await  idpay.create({
-	    amount:  100000,
-	    order_id:  2423,
-	    callback:  "http://localhost:3000/callback",
-	    name:  "فتاح رنجبر",
-	    phone:  "09339993377",
-	    mail:  "my@site.com",
-	    desc:  "توضیحات",
-    });
+
+	const createpay = await  idpay.create({
+		amount:  100000,
+		order_id:  2423,
+		callback:  "http://localhost:3000/callback",
+		name:  "فتاح رنجبر",
+		phone:  "09339993377",
+		mail:  "my@site.com",
+		desc:  "توضیحات",
+	});
+	
   ```
+	
   در صورت درست بودن تمام ورودی های متد پاسخ زیر برای شما به صورت جسون به شما داده میشود
 
   ```
