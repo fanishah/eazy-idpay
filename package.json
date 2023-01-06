@@ -1,9 +1,9 @@
 {
   "name": "easy-idpay",
   "version": "1.0.0",
-  "description": "Easy and convenient use of API the IDPAY payment gateway",
+  "description": "استفاده آسان و راحت از درگاه پرداخت آیدی پی",
   "author": "fanishah",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
