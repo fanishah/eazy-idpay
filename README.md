@@ -71,4 +71,9 @@
   ```
   [ لیست خطاها](https://idpay.ir/web-service/v1.1/?javascript#d7b83cfb9c)
   
+	
+ورودی | نوع | اجباری 
+--- | --- | --- 
+amount | بله | بله 
+	
 </div>
