@@ -63,8 +63,8 @@ const createpay = await idpay.create({
 {
   status: 406
   data:{  
-  "error_code": 32, 
-  "error_message": ".نباید خالی باشد `order_id` مقدار"
+  	"error_code": 32, 
+  	"error_message": ".نباید خالی باشد `order_id` مقدار"
   }
 }
   ```
@@ -135,8 +135,8 @@ const verifypay = await idpay.verify(id, order_id);
 {
   status: 406
   data:{  
-  "error_code": 32, 
-  "error_message": ".نباید خالی باشد `order_id` مقدار"
+  	"error_code": 32, 
+  	"error_message": ".نباید خالی باشد `order_id` مقدار"
   }
 }
   ```
@@ -202,8 +202,8 @@ const inquirypay = await idpay.inquiry(id, order_id);
 {
   status: 406
   data:{  
-  "error_code": 32, 
-  "error_message": ".نباید خالی باشد `order_id` مقدار"
+  	"error_code": 32, 
+  	"error_message": ".نباید خالی باشد `order_id` مقدار"
   }
 }
 ```
