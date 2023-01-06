@@ -91,7 +91,7 @@
 	const verifypay = await idpay.verify(id, order_id);
   ```  
 	
-مقدار id و order_id در بادی کال بک می باشد که در پیکج Express در req.body می باشد.
+مقدار id و order_id در بادی کال بک می باشد که در پکیج Express در req.body می باشد.
 
 	
 	
@@ -99,4 +99,26 @@
 --- | --- | ---  
 | بله| رشته |id|
 | بله| رشته |order_id|
+
+
+در صورت کاربر تراکنش را پرداخت کرده باشد پاسخ متد verify مشابه زیر است
+	
+```
+	{ 
+"status": "100", 
+"track_id": "10012", 
+"id": "d2e353189823079e1e4181772cff5292", 
+"order_id": "101", 
+"amount": "10000", 
+"date": "1546288200", 
+"payment": { 
+    "track_id": "888001", 
+    "amount": "10000", 
+    "card_no": "123456******1234", 
+    "hashed_card_no": "E59FA6241C94B8836E3D03120DF33E80FD988888BBA0A122240C2E7D23B48295", 
+    "date": "1546288500" }, 
+"verify": { "date": "1546288800" } 
+}
+```
+
 </div>
