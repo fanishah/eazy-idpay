@@ -90,11 +90,14 @@
 	```
 	const verifypay = await idpay.verify(id, order_id);
 	```
+ <p>
 	مقدار id و order_id در بادی کال بک می باشد که در پیکج Express در req.body می باشد.
-	
-	|اجباری |نوع|ورودی|
-|--|--|--|--|
+	  </
+	 p>
+	اجباری | نوع | ورودی 
+--- | --- | ---  
 | بله| رشته |id|
 | بله| رشته |order_id|
-	
+
+
 </div>
