@@ -207,4 +207,46 @@ const inquirypay = await idpay.inquiry(id, order_id);
     }}
 ```
 	
+# نمونه کد
+```
+const Eezyidpay = require("./dd");
+
+const express = require("express");
+var bodyParser = require("body-parser");
+
+const idpay = new Eezyidpay("318a29df-9dff-40a2-bcc0-25fcf30bde8b", true);
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get("/", async (req, res) => {
+  const createpay = await idpay.create({
+    order_id: 2423,
+    amount: 100000,
+    callback: "http://localhost:3000/callback",
+    name: "قاسم رادمان",
+    phone: "09382198592",
+    mail: "my@site.com",
+    desc: "توضیحات پرداخت کننده",
+  });
+  console.log(create);
+  res.redirect(create.data.link);
+});
+
+app.post("/callback", async (req, res) => {
+  const verifypay = await idpay.verify(req.body.id, req.body.order_id);
+  const inquirypay = await idpay.inquiry(req.body.id, req.body.order_id);
+  console.log(verifypay);
+  res.send(inquirypay);
+});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+const ss = {
+  id: "d2e353189823079e1e4181772cff5292",
+  link: "https://idpay.ir/p/ws-sandbox/d2e353189823079e1e4181772cff5292",
+};
+
+```
+	
 </div>
