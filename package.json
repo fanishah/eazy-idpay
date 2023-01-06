@@ -1,5 +1,5 @@
 {
-  "name": "easy-idpay",
+  "name": "eazy-idpay",
   "version": "1.0.0",
   "description": "استفاده آسان و راحت از درگاه پرداخت آیدی پی",
   "author": "fanishah",
@@ -9,16 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fanishah/easy-idpay"
+    "url": "https://github.com/fanishah/eazy-idpay"
   },
   "bugs": {
-    "url": "https://github.com/fanishah/easy-idpay/issues"
+    "url": "https://github.com/fanishah/eazy-idpay/issues"
   },
-  "homepage": "https://fanishah.com/easy-idpay",
+  "homepage": "https://npm.fanishah.ir/eazy-idpay",
   "license": "ISC",
   "keywords": [
     "idpay",
     "shaprak",
+    "eazy-idpay",
     "پرداخت یار",
     "آیدی پی"
   ],
