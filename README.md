@@ -22,10 +22,10 @@
   
   # احراز هویت درگاه
   
-  ```
-      const  Eazyidpay = require("eazy-idpay");
-    const  idpay = new  Eazyidpay(TOKEN, true);
-  ```
+```
+const Eazyidpay = require("eazy-idpay");
+const idpay = new Eazyidpay(TOKEN, true);
+```
   TOKEN :   درگاه جهت احراز هویت API
   
   # ایجاد تراکنش
@@ -35,17 +35,15 @@
   </p>
 	
   ```
-
-	const createpay = await  idpay.create({
-		amount:  100000,
-		order_id:  2423,
-		callback:  "http://localhost:3000/callback",
-		name:  "فتاح رنجبر",
-		phone:  "09339993377",
-		mail:  "my@site.com",
-		desc:  "توضیحات",
-	});
-	
+const createpay = await idpay.create({
+  amount: 100000,
+  order_id: 2423,
+  callback: "http://localhost:3000/callback",
+  name: "فتاح رنجبر",
+  phone: "09339993377",
+  mail: "my@site.com",
+  desc: "توضیحات",
+});
   ```
 	
   در صورت درست بودن تمام ورودی های متد پاسخ زیر برای شما به صورت جسون به شما داده میشود
@@ -62,12 +60,13 @@
 در صورت بروز خطا در ایجاد تراکنش پاسخی مشابه زیر به صورت جسون دریافت می کنید
 
   ```
-      {
-	  status: 406
-	  data:{  
-		"error_code": 32, 
-		"error_message": ".نباید خالی باشد `order_id` مقدار"
-    }}
+{
+  status: 406
+  data:{  
+  "error_code": 32, 
+  "error_message": ".نباید خالی باشد `order_id` مقدار"
+  }
+}
   ```
   [ لیست خطاها](https://idpay.ir/web-service/v1.1/?javascript#d7b83cfb9c)
   
@@ -88,7 +87,7 @@
 در صفحه کال بک می توانید  مرحله اعتبار سنجی تراکنش را با متد verify انجام دهید.
 
   ```
-	const verifypay = await idpay.verify(id, order_id);
+const verifypay = await idpay.verify(id, order_id);
   ```  
 	
 مقدار id و order_id در بادی کال بک می باشد که در پکیج Express در req.body می باشد.
@@ -133,12 +132,13 @@
 در صورت بروز خطا در ایجاد تراکنش پاسخی مشابه زیر به صورت جسون دریافت می کنید
 
   ```
-      {
-	  status: 406
-	  data:{  
-  		"error_code": 32,
-		"error_message": "شماره سفارش `order_id` نباید خالی باشد."
-    }}
+{
+  status: 406
+  data:{  
+  "error_code": 32, 
+  "error_message": ".نباید خالی باشد `order_id` مقدار"
+  }
+}
   ```
 	
   # استعلام آخرین وضعیت تراکنش
@@ -199,12 +199,13 @@ const inquirypay = await idpay.inquiry(id, order_id);
 در صورت بروز خطا پاسخی مشابه زیر به صورت جسون دریافت می کنید
 
 ```
-      {
-	  status: 406
-	  data:{  
-  		"error_code": 32,
-		"error_message": "شماره سفارش `order_id` نباید خالی باشد."
-    }}
+{
+  status: 406
+  data:{  
+  "error_code": 32, 
+  "error_message": ".نباید خالی باشد `order_id` مقدار"
+  }
+}
 ```
 	
 # نمونه کد
