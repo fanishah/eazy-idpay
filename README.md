@@ -281,8 +281,8 @@ app.get("/buy", async (req, res) => {
     mail: "my@site.com",
     desc: "تلگرام : @fanishah",
   });
-  console.log(create);
-  res.redirect(create.data.link);
+  console.log(createpay);
+  res.redirect(createpay.data.link);
 });
 
 app.post("/callback", async (req, res) => {
