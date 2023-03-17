@@ -47,7 +47,9 @@ class Eazyidpay {
       );
 
       return { status: requestpay.status, data: requestpay.data };
-    } catch (err: any) {}
+    } catch (err: any) {
+      return { status: err.response.status, data: err.response.data };
+    }
   }
 
   // تایید تراکنش
