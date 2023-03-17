@@ -1,16 +1,11 @@
 import axios from "axios";
 
 class Eazyidpay {
-  private _api: string; // آی پی ای درگاه پرداخت
-  private _sandbox?: boolean; // تراکنش آزمایشی
-  constructor(api: string, sandbox: boolean = false) {
-    if (!api) {
+  constructor(private _api: string, private _sandbox: boolean = false) {
+    if (!_api) {
       throw Error("Invalid API KEY");
     }
-    this._api = api;
-    this._sandbox = sandbox;
   }
-
   // ایجاد تراکنش
   async create({
     amount,
