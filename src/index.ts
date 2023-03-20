@@ -19,10 +19,10 @@ class Eazyidpay {
     amount: number;
     order_id: string | number;
     callback: string;
-    name: string;
-    phone: string;
-    mail: string;
-    desc: string;
+    name?: string;
+    phone?: string;
+    mail?: string;
+    desc?: string;
   }): Promise<any> {
     try {
       let requestpay = await axios.post(
