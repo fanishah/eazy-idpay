@@ -1,6 +1,6 @@
 {
   "name": "eazy-idpay",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "استفاده آسان و راحت از درگاه پرداخت آیدی پی",
   "author": "fanishah",
   "main": "dist/index.js",
